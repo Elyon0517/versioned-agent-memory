@@ -1,0 +1,73 @@
+<div align="center">
+
+# Agent Memory Kit
+
+**Versioned memory. Explicit corrections. Isolated sessions.**
+
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Status](https://img.shields.io/badge/status-alpha-orange)](docs/architecture.md) [![Stars](https://img.shields.io/github/stars/Elyon0517/agent-memory-kit?style=flat)](https://github.com/Elyon0517/agent-memory-kit/stargazers)
+
+Find this useful? Give it a star ⭐
+
+[English](README.md) · [简体中文](README.zh-CN.md) · [Architecture](docs/architecture.md) · [Examples](examples) · [Validation](docs/validation.md)
+
+</div>
+
+```mermaid
+flowchart TD
+  Application --> MemoryEngine
+  Application --> SessionMemory
+  MemoryEngine --> CanonicalStore
+  MemoryEngine --> VectorProjection
+  SessionMemory --> HistoryAndSummary
+```
+
+## Purpose
+
+An independent SDK for long-term and session memory. ContextKit consumes this component for context orchestration; FlowEval evaluates strategies separately. The long-term memory kernel is extracted from the previously published ContextKit implementation, preserving its provenance and validation contracts.
+
+## Install and try
+
+```bash
+pip install "agent-memory-kit @ git+https://github.com/Elyon0517/agent-memory-kit.git@v0.1.0"
+```
+
+```python
+from agent_memory_kit import MemoryEngine, Observation, Scope, Message, SessionMemory
+from agent_memory_kit.adapters import InMemoryStore
+
+scope = Scope("demo", "user-1")
+engine = MemoryEngine(InMemoryStore())
+engine.observe(
+    scope, Observation("event-1", "preference", 1, "Vegetarian meals", ("settings:1",))
+)
+sessions = SessionMemory()
+sessions.append(scope, "chat-1", Message("m1", "user", "Plan dinner"), ttl=3600)
+print(engine.active(scope)[0].content)
+```
+
+## Capabilities
+
+- Evidence-backed long-term memory, source versions and idempotent events.
+- User correction protection, logical forgetting and canonical retrieval validation.
+- MongoDB aggregate storage and a reference cosine vector adapter.
+- Tenant/user/session isolation, message replay checks and fixed session TTL.
+- Injectable summaries with revision checks against concurrent mutations.
+
+## Scope and limitations
+
+Session storage is process-local and synchronous. Session TTL expires the whole session; long-term memories do not yet expire automatically. Confidence is not a general importance score. Summaries are supplied by your callback; no model or automatic extraction is bundled. Forgetting is logical revocation, not guaranteed erasure of backups. Canonical aggregates and session histories grow without compaction. Remote vector adapters, production session persistence and ranking research remain future work.
+
+## Development
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev,mongo]'
+pytest -q
+ruff check .
+mypy
+```
+
+## License
+
+[MIT](LICENSE) © Elyon Li
