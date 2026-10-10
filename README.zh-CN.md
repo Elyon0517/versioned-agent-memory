@@ -1,10 +1,12 @@
 <div align="center">
 
-# Agent Memory Kit
+# Versioned Agent Memory
+
+原名 **Agent Memory Kit**。本次调整仓库名称；Python 包名、import 路径和 CLI 命令保持兼容。
 
 **Versioned memory. Explicit corrections. Isolated sessions.**
 
-[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Status](https://img.shields.io/badge/status-alpha-orange)](docs/architecture.md) [![Stars](https://img.shields.io/github/stars/Elyon0517/agent-memory-kit?style=flat)](https://github.com/Elyon0517/agent-memory-kit/stargazers)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Status](https://img.shields.io/badge/status-alpha-orange)](docs/architecture.md) [![Stars](https://img.shields.io/github/stars/Elyon0517/versioned-agent-memory?style=flat)](https://github.com/Elyon0517/versioned-agent-memory/stargazers)
 
 喜欢这个项目？请点一个 Star ⭐
 
@@ -23,12 +25,12 @@ flowchart TD
 
 ## 定位
 
-独立的长期记忆与会话记忆 SDK。ContextKit 通过接口接入本组件，负责上下文编排；FlowEval 独立评估策略。长期记忆内核从已发布的 ContextKit 开源实现迁移，保留原有验证与来源追踪设计。
+独立的长期记忆与会话记忆 SDK。Agent Context Builder 通过接口接入本组件，负责上下文编排；Agent Strategy Eval 独立评估策略。长期记忆内核从已发布的 Agent Context Builder 开源实现迁移，保留原有验证与来源追踪设计。
 
 ## 安装与示例
 
 ```bash
-pip install "agent-memory-kit @ git+https://github.com/Elyon0517/agent-memory-kit.git@v0.1.0"
+pip install "agent-memory-kit @ git+https://github.com/Elyon0517/versioned-agent-memory.git@v0.1.0"
 ```
 
 ```python

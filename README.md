@@ -1,10 +1,12 @@
 <div align="center">
 
-# Agent Memory Kit
+# Versioned Agent Memory
+
+Formerly **Agent Memory Kit**. Repository branding has changed; Python package names, imports and CLI commands remain compatible.
 
 **Versioned memory. Explicit corrections. Isolated sessions.**
 
-[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Status](https://img.shields.io/badge/status-alpha-orange)](docs/architecture.md) [![Stars](https://img.shields.io/github/stars/Elyon0517/agent-memory-kit?style=flat)](https://github.com/Elyon0517/agent-memory-kit/stargazers)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Status](https://img.shields.io/badge/status-alpha-orange)](docs/architecture.md) [![Stars](https://img.shields.io/github/stars/Elyon0517/versioned-agent-memory?style=flat)](https://github.com/Elyon0517/versioned-agent-memory/stargazers)
 
 Find this useful? Give it a star ⭐
 
@@ -23,12 +25,12 @@ flowchart TD
 
 ## Purpose
 
-An independent SDK for long-term and session memory. ContextKit consumes this component for context orchestration; FlowEval evaluates strategies separately. The long-term memory kernel is extracted from the previously published ContextKit implementation, preserving its provenance and validation contracts.
+An independent SDK for long-term and session memory. Agent Context Builder consumes this component for context orchestration; Agent Strategy Eval evaluates strategies separately. The long-term memory kernel is extracted from the previously published Agent Context Builder implementation, preserving its provenance and validation contracts.
 
 ## Install and try
 
 ```bash
-pip install "agent-memory-kit @ git+https://github.com/Elyon0517/agent-memory-kit.git@v0.1.0"
+pip install "agent-memory-kit @ git+https://github.com/Elyon0517/versioned-agent-memory.git@v0.1.0"
 ```
 
 ```python

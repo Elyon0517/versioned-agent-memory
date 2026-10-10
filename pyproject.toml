@@ -23,8 +23,8 @@ redis = ["redis>=5,<9"]
 dev = ["pytest>=8,<10", "ruff>=0.14,<1", "mypy>=1.15,<2", "mongomock>=4.3,<5", "fakeredis>=2.28,<3"]
 
 [project.urls]
-Repository = "https://github.com/Elyon0517/agent-memory-kit"
-Issues = "https://github.com/Elyon0517/agent-memory-kit/issues"
+Repository = "https://github.com/Elyon0517/versioned-agent-memory"
+Issues = "https://github.com/Elyon0517/versioned-agent-memory/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/agent_memory_kit"]
