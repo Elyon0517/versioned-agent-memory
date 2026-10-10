@@ -9,7 +9,7 @@ description = "Versioned long-term and session memory for stateful applications"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
-authors = [{name = "Elyon Li"}]
+authors = [{name = "Honghao Li"}]
 keywords = ["memory", "context", "state", "provenance", "agents"]
 classifiers = [
   "Development Status :: 3 - Alpha",

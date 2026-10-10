@@ -71,4 +71,6 @@ mypy
 
 ## License
 
-[MIT](LICENSE) © Elyon Li
+本项目采用 [MIT License](LICENSE)。
+
+Copyright © 2026 Honghao Li.
