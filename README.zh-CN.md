@@ -84,3 +84,10 @@ Copyright © 2026 Honghao Li.
 展示观察、重放、用户纠错保护、遗忘与隔离，卡片可展开查看证据和回执。
 
 复现浏览器测试与截图的命令见 [SHOWCASE.md](docs/SHOWCASE.md)。
+
+## 来源、版权与署名
+
+原始仓库：[Elyon0517/versioned-agent-memory](https://github.com/Elyon0517/versioned-agent-memory)。
+许可及第三方材料边界见 [COPYRIGHT.md](COPYRIGHT.md)，引用信息见 [CITATION.cff](CITATION.cff)。
+请按适用许可证保留版权和许可声明；文章或演示中附上原仓库链接是署名建议，
+不构成对已有开源许可的额外限制。使用或提及本项目不代表作者为相关产品背书。
