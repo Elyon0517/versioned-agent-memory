@@ -14,6 +14,34 @@ Find this useful? Give it a star ⭐
 
 </div>
 
+## See a fact change without losing control
+
+![See a fact change without losing control](docs/screenshots/memory-lifecycle.png)
+
+An agent remembers **Seattle**. The user corrects it to **Boston**. A later source still says
+Seattle — the SDK preserves the user's correction. After forgetting, later observations
+cannot resurrect the revoked memory. Another user sees neither the fact nor the session.
+
+This executable walkthrough uses the real in-memory SDK, including receipts, evidence,
+version checks and assertions. Expand a card in the generated HTML to inspect its receipt.
+
+**Observe → replay → correct → protect → forget → block resurrection.** No API key, database or model download is needed.
+
+### Run the visual walkthrough
+
+```bash
+git clone https://github.com/Elyon0517/versioned-agent-memory.git
+cd versioned-agent-memory
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+python examples/showcase.py
+# Open docs/showcase/index.html in your browser
+```
+
+The HTML report and JSON are generated locally; they are not a hosted service.
+[Reproduce the browser checks and screenshot](docs/SHOWCASE.md).
+
 ```mermaid
 flowchart TD
   Application --> MemoryEngine
