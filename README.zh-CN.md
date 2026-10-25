@@ -74,3 +74,13 @@ mypy
 本项目采用 [MIT License](LICENSE)。
 
 Copyright © 2026 Honghao Li.
+
+## 可运行的可视化演示
+
+![真实 SDK 运行结果](docs/screenshots/memory-lifecycle.png)
+
+在仓库根目录安装项目后执行 `python examples/showcase.py`，打开生成的
+`docs/showcase/index.html`。演示由真实 SDK 调用生成，不需要 API key 或数据库。
+展示观察、重放、用户纠错保护、遗忘与隔离，卡片可展开查看证据和回执。
+
+复现浏览器测试与截图的命令见 [SHOWCASE.md](docs/SHOWCASE.md)。
